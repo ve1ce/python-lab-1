@@ -15,4 +15,14 @@ my_favorite_movies = 'Терминатор, Пятый элемент, Ават�
 # Использовать .split() или .find() или другие методы строки нельзя - пользуйтесь только срезами,
 # как указано в задании!
 
-# TODO здесь ваш код
+write=my_favorite_movies[:10] # первйы
+print(write)
+
+write=my_favorite_movies[-15:] # последний
+print(write)
+
+write=my_favorite_movies[12:25] # второй
+print(write)
+
+write=my_favorite_movies[-22:-17] # второй с конца
+print(write)
