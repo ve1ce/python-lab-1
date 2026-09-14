@@ -10,6 +10,9 @@
 # Пример для чисел "1 2 3" и "9"
 result = (1 + 2) * 3
 print(result)
+def calculate_result():
+    result = 1 + 2 * (3 + 4 + 5)
+    return result
 
-result = 1 + 2 * (3 + 4 + 5)
-print(result)
+if __name__ == '__main__':
+    print(calculate_result())

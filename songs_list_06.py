@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# Есть список песен группы Depeche Mode со временем звучания с точностью до долей минут
+def calculate_songs_time():
+    violator_songs_list = [
+        ['World in My Eyes', 4.86],
+        ['Sweetest Perfection', 4.43],
+        ['Personal Jesus', 4.56],
+        ['Halo', 4.9],
+        ['Waiting for the Night', 6.07],
+        ['Enjoy the Silence', 4.20],
+        ['Policy of Truth', 4.76],
+        ['Blue Dress', 4.29],
+        ['Clean', 5.83],
+    ]
+
+    # Распечатайте общее время звучания трех песен: 'Halo', 'Enjoy the Silence' и 'Clean' в формате
+    #   Три песни звучат ХХХ минут
+    # Обратите внимание, что суммирование чисел с плавающей точкой может давать погрешность,
+    # округлите результат до 3 знаков после запятой
+    total_time = (
+        violator_songs_list[3][1]
+        + violator_songs_list[5][1]
+        + violator_songs_list[8][1]
+    )
+
+
+    # Есть словарь песен группы Depeche Mode
+    violator_songs_dict = {
+        'World in My Eyes': 4.76,
+        'Sweetest Perfection': 4.43,
+        'Personal Jesus': 4.56,
+        'Halo': 4.30,
+        'Waiting for the Night': 6.07,
+        'Enjoy the Silence': 4.6,
+        'Policy of Truth': 4.88,
+        'Blue Dress': 4.18,
+        'Clean': 5.68,
+    }
+
+    # Распечатайте общее время звучания трех других песен: 'Sweetest Perfection', 'Policy of Truth' и 'Blue Dress'
+    # в формате
+    #   А другие три песни звучат ХХХ минут
+    # Обратите внимание на округление
+    other_total_time = (
+        violator_songs_dict['Sweetest Perfection']
+        + violator_songs_dict['Policy of Truth']
+        + violator_songs_dict['Blue Dress']
+    )
+
+    return round(total_time, 3), round(other_total_time, 3)
+
+if __name__ == '__main__':
+    total_time, other_total_time = calculate_songs_time()
+
+    print('Три песни звучат', total_time, 'минут')
+    print('А другие три песни звучат', other_total_time, 'минут')
