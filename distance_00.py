@@ -25,7 +25,7 @@ def calculate_distances():
                     + (coordinates_1[1] - coordinates_2[1]) ** 2
                 ) ** 0.5
 
-                distances[city_1][city_2] = round(distance, 2) # округление для красивого вывода
+                distances[city_1][city_2] = distance
 
     return distances
 
